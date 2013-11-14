@@ -1,0 +1,7 @@
+<h2>Modifier une to-do</h2>
+
+<form action='/todos/<%= @todo.id %>/edit' method='post'>
+  <input type='text' name='title' value='<%= @todo.title %>'><br>
+  <textarea name='content'><%= @todo.content %></textarea><br>
+  <input type='submit' value='Modifier cette to-do'>
+</form>

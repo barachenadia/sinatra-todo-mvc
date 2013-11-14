@@ -1,0 +1,15 @@
+<h2>To-do</h2>
+
+<% if @todo.urgent? %>
+  <marquee><h3 class='<%= "urgent" if @todo.urgent? %>'> <%= @todo.title %></h3></marquee>
+<% else %>
+  <h3><%= @todo.title %></h3>
+<% end %>
+<p><%= @todo.content %></p>
+
+<a href='/todos/<%= @todo.id %>/edit'>Modifier cette to-do</a>
+<form action='/todos/<%= @todo.id %>/delete' method='post'>
+  <input type='submit' value='Supprimer cette to-do'>
+</form>
+<br>
+<a href='/todos'>Toutes les to-do</a>
