@@ -1,0 +1,8 @@
+<p style='color:red'><%= session[:error_message] %></p>
+<% session[:error_message] = nil %>
+<p style='color:red'><%= session[:error_message] %></p>
+<form action='/sessions' method='post'>
+  <input type='text' name='username' placeholder="nom d'utilisateur">
+  <input type='password' name='password' placeholder="mot de passe">
+  <input type='submit' value='connexion'>
+</form>

@@ -7,6 +7,14 @@
 </style>
 </head>
 <body>
+<% if current_user %>
+  <%= current_user %>
+  <form action='/sessions/destroy' method='post'>
+    <input type='submit' value='logout'>
+  </form>
+<% else %>
+  <a href='/sessions/new'>Connexion</a>
+<% end %>
 <h1>To-do app</h1>
 <%= yield %>
 </body>
